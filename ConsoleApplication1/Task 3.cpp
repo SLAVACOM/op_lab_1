@@ -1,19 +1,32 @@
-#include<iostream>
+﻿#include<iostream>
 #include <locale>
 
 using namespace std;
 
-int main1() {
+int main() {
 	setlocale(LC_ALL, "Russian");
 	
-	double len;
+	int num, num_digits_count, num_digits_summ, num_first_digits;
 
-	cout << "������� ������ �����:" << endl;
+	cout << "Введите натуральное число: ";
+	cin >> num;
 
-	cin >> len;
+	num_digits_count = 0;
+	num_digits_summ = 0;
+	int t = num;
+	while (t > 0)
+	{
+		num_digits_count++;
+		num_first_digits = t % 10;
+		num_digits_summ += num_first_digits;
+		t /= 10;
+	}
 
-	cout << "����� ����: " << len*len*len << endl;
-	cout << "��� ������� ������� �����������: "<< len*len*4 << endl;
-
+	cout << "а) Количество цифр: " << num_digits_count << endl;
+	cout << "б) Сумма цифр числа: " << num_digits_summ << endl;
+	cout << "в) Последняя цифра числа: " << num % 10 << endl;
+	cout << "г) Первая цифра числа: " << num_first_digits << endl;
+	cout << "д) Предпоследняя цифра числа: " << num % 10 << endl;
+	
 	return 0;
 }

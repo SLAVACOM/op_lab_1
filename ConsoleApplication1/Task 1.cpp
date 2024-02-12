@@ -36,7 +36,7 @@ double find_R(double a, double b, double c, double s){
 	return rez;
 }
 
-int main() {
+int main1() {
 	setlocale(LC_ALL, "Russian");
 	double x1, x2, x3, P, s, h1, h2, h3, m1, m2, m3, b1, b2, b3, r, R;
 
